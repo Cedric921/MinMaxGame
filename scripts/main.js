@@ -35,3 +35,4 @@ const jouer = () => {
 		}
 	}
 };
+btnValidate.addEventListener('click', jouer);
