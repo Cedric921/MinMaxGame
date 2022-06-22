@@ -1,7 +1,7 @@
 const btnValidate = document.getElementById('btn-validate');
 let round = 5;
 let win;
-const toDevinne = Math.floor(Math.random() * 10 + 1);
+const toGuess = Math.floor(Math.random() * 10 + 1);
 
 const jouer = () => {
 	const user = document.getElementById('userInput');
@@ -12,10 +12,10 @@ const jouer = () => {
 		message.textContent = 'entrer un nombre stp';
 		return;
 	} else {
-		if (userInput > toDevinne) {
+		if (userInput > toGuess) {
 			message.textContent = 'Your number is to big';
 			round--;
-		} else if (userInput < toDevinne) {
+		} else if (userInput < toGuess) {
 			message.textContent = 'Your number is too small';
 			round--;
 		} else {
@@ -26,15 +26,13 @@ const jouer = () => {
 	}
 	if (round <= 0) {
 		if (win) {
-            message.textContent = 'You won, number was ' + toDevinne;
-            message.style.color = 'green';
+            		message.textContent = 'You won, number was ' + toGuess;
+            		message.style.color = 'green';
 		} else {
-            message.textContent = 'You lost, number was ' + toDevinne;
-            message.style.color = 'red';
+            		message.textContent = 'You lost, number was ' + toGuess;
+            		message.style.color = 'red';
 		}
 	}
 };
 
 btnValidate.addEventListener('click', jouer);
-
-console.log('vb');
