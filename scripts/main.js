@@ -3,6 +3,7 @@ const btnReset = document.querySelector('.reset');
 const main = document.querySelector('body');
 
 const game = () => {
+	console.log('game start');
 	let round = 5;
 	let win;
 	const toGuess = Math.floor(Math.random() * 10 + 1);
@@ -42,6 +43,6 @@ const game = () => {
 }
 
 main.addEventListener('load', game);
-btnReset.addEventListener('click', game);f
+btnReset.addEventListener('click', game);
 
 
